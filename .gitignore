@@ -1,3 +1,4 @@
 /.github
+/.ssh
 .tox/*
 *.bak
