@@ -4,3 +4,4 @@ collections:
   - name: ibm.power_ibmi
   - name: ansible.posix
   - name: ansible.utils
+  - name: community.general
