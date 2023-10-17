@@ -55,7 +55,7 @@ additional_build_steps:
     - RUN $PYCMD -m pip install -U pip
   append_galaxy:
     - ADD _build/plugins/modules/ibmi_fix_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_check.py
-    - ADD _build/plugins/modules/ibmi_fix_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_group_check.py
+    - ADD _build/plugins/modules/ibmi_fix_group_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_group_check.py
   append_final:
     - COPY --from=quay.io/ansible/receptor:devel /usr/bin/receptor /usr/bin/receptor
     - RUN mkdir -p /var/run/receptor
