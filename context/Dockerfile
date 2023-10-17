@@ -40,7 +40,7 @@ WORKDIR /build
 RUN ansible-galaxy role install $ANSIBLE_GALAXY_CLI_ROLE_OPTS -r requirements.yml --roles-path "/usr/share/ansible/roles"
 RUN ANSIBLE_GALAXY_DISABLE_GPG_VERIFY=1 ansible-galaxy collection install $ANSIBLE_GALAXY_CLI_COLLECTION_OPTS -r requirements.yml --collections-path "/usr/share/ansible/collections"
 ADD _build/plugins/modules/ibmi_fix_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_check.py
-ADD _build/plugins/modules/ibmi_fix_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_group_check.py
+ADD _build/plugins/modules/ibmi_fix_group_check.py /usr/share/ansible/collections/ansible_collections/ibm/power_ibmi/plugins/modules/ibmi_fix_group_check.py
 
 # Builder build stage
 FROM base as builder
