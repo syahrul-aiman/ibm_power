@@ -84,6 +84,7 @@ WORKDIR /runner
 RUN $PYCMD -m pip install --no-cache-dir 'dumb-init==1.2.5'
 COPY --from=quay.io/ansible/receptor:devel /usr/bin/receptor /usr/bin/receptor
 RUN mkdir -p /var/run/receptor
+RUN mkdir -p /tmp/work
 RUN git lfs install --system
 RUN rm -rf /output
 LABEL ansible-execution-environment=true
