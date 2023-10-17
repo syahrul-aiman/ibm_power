@@ -16,6 +16,7 @@ dependencies:
       - name: ibm.power_ibmi
       - name: ansible.posix
       - name: ansible.utils
+      - name: community.general
   system: |
     git-core [platform:rpm]
     python3.9-devel [platform:rpm compile]
