@@ -1,6 +1,9 @@
 # AWX EE
 
-The default Execution Environment for AWX.
+Modified from the default Execution Environment for AWX:
+https://github.com/ansible/awx-ee
+
+This Execution Environment for AWX comes with ibm.power_aix and ibm.power_ibmi collections.
 
 ## Build the image locally
 
